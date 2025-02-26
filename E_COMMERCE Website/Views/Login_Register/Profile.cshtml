@@ -1,0 +1,17 @@
+﻿@model E_COMMERCE_Website.Models.User
+
+<h1>Profile</h1>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <!-- Add other user properties as needed -->
+</table>
+
+<a asp-controller="Login_Register" asp-action="EditProfile" asp-route-id="@Model.Id">Edit</a> 

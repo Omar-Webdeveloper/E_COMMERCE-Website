@@ -1,0 +1,15 @@
+﻿@model E_COMMERCE_Website.Models.User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<form asp-action="Login" method="post">
+    <label asp-for="Email">Email:</label><br>
+    <input type="text" asp-for="Email" /><br>
+    <label asp-for="Password">Password:</label><br>
+    <input type="password" asp-for="Password" /><br>
+    <button type="submit">Login</button>
+</form>
+<a href="@Url.Action("Register", "Login_Register")" class="btn btn-primary">New Account for free</a>

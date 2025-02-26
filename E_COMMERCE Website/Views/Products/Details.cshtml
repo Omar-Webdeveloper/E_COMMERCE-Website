@@ -1,0 +1,22 @@
+﻿@model E_COMMERCE_Website.Models.Product
+
+<div class="container mt-4">
+    <h2>Product Details</h2>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-3">Product Name:</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">Product Price:</dt>
+        <dd class="col-sm-9">@Model.Price</dd>
+
+        <dt class="col-sm-3">Product Image:</dt>
+        <dd class="col-sm-9">@Model.Image</dd>
+
+        <dt class="col-sm-3">Product Description:</dt>
+        <dd class="col-sm-9">@Model.Description</dd>
+    </dl>
+
+    <a href="@Url.Action("Index", "Products")" class="btn btn-secondary">Back to List</a>
+</div>

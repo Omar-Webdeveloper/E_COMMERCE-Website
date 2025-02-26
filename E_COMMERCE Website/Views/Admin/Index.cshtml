@@ -1,0 +1,35 @@
+﻿@model E_COMMERCE_Website.Models.User
+
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h1>User Details</h1>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Password</th>
+        <td>@Model.Password</td>
+    </tr>
+    <tr>
+        <th>Role</th>
+        <td>@Model.Role</td>
+    </tr>
+    <!-- Add other user properties as needed -->
+</table>
+
+<a asp-controller="User" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+<a asp-controller="User" asp-action="All_users">Back to List</a>
