@@ -55,14 +55,17 @@ namespace e_commerce.Controllers
             }
             if(existingUser.Role == "admin")
             {
+                TempData["Role"] = "admin";
                 HttpContext.Session.SetString("UserName", existingUser.Name);
                 return RedirectToAction("Index", "Admin");
             }
             if (existingUser != null)
             {
+                TempData["Role"] = "user";
                 HttpContext.Session.SetString("UserName", existingUser.Name);
                 return RedirectToAction("Index", "Home");
             }
+            TempData["Role"] = "guest";
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(user);
         }

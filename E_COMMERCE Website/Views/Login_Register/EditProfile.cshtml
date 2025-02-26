@@ -21,6 +21,14 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+             <div class="form-group">
+                <label asp-for="Password" class="control-label" style="display:none;"></label>
+                <input asp-for="Password" class="form-control" style="display:none;" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label" style="display:none;"></label>
+                <input asp-for="Role" class="form-control" style="display:none;" />
+            </div>
 
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
